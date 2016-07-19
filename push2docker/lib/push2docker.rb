@@ -178,7 +178,7 @@ module Push2Docker
   def create_dockerfile(stage_dir, start_command)
     docker_file = File.new(File.join(stage_dir, 'Dockerfile'), 'w')
     docker_file.puts("FROM cloudfoundry/#{cf_stack}")
-    docker_file.puts('RUN useradd -m vcap')
+#    docker_file.puts('RUN useradd -m vcap')
     docker_file.puts("COPY . /home/vcap")
     docker_file.puts('RUN chown -R vcap:vcap /home/vcap')
     docker_file.puts('ENV HOME /home/vcap/app')

@@ -61,7 +61,7 @@ echo "Buildpack: $BUILDPACK_PATH"
 echo "Stack: $STACK"
 echo "Environment variables: $ENV_VARS"
 
-DOCKER_CMD="docker run -it $DOCKER_ARGS $ENV_VARS cloudfoundry/cflinuxfs2"
+DOCKER_CMD="docker run -it $DOCKER_ARGS $ENV_VARS push2docker"
 DOCKER_CMD_ARGS="/scripts/push2docker/bin/push2docker $APP_NAME /app.x $BUILDPACK_URL /scripts/buildpack_cache /"
 
 echo "Docker run cmd: $DOCKER_CMD"
